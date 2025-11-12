@@ -1,12 +1,12 @@
-Services:
+services:
   simple-apps:
     container_name: ct-simpleapps
     build: ./app
-    port:
+    ports:
       - "11000:3000"
     restart: always
     deploy:
       resources:
       limits:
-        cpu: "0.5"
+        cpus: "0.5"
         memory: 128M
